@@ -1,0 +1,10 @@
+---
+import Layout from "../layouts/Layout.astro"
+import background from "../assets/background2.svg"
+---
+
+<Layout title="About Pepino">
+    <div id="container" class="bg-gray-900 h-full">
+        <img id="background" src={background.src} alt="" fetchpriority="high" class="blur-3xl">
+    </div>
+</Layout>

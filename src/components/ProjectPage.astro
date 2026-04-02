@@ -1,0 +1,64 @@
+---
+import type { ImageFunction } from 'astro:content';
+
+interface Props{
+    title: string;
+    icon1: string;
+    icon2?: string;
+    hackatime: string;
+    thumbnail: ImageMetadata;
+    intro: string;
+    why: string;
+    readme?: string;
+    image1?: string;
+    image2?: string;
+    image3?: string
+    icon1src?: string;
+    icon2src?: string;
+    }
+
+let icon1src = ""
+let icon2src = ""
+
+const{title = "Placeholder", thumbnail, intro, why, readme, image1, image2, image3, icon1, icon2, hackatime} = Astro.props
+
+if (icon1 == "python") {icon1src = "https://img.shields.io/badge/-Python-000?&logo=Python"}
+if (icon2 == "python") {icon2src = "https://img.shields.io/badge/-Python-000?&logo=Python"}
+if (icon1 == "html") {icon1src = "https://img.shields.io/badge/-HTML-000?&logo=HTML5"}
+if (icon2 == "html") {icon2src = "https://img.shields.io/badge/-HTML-000?&logo=HTML5"}
+if (icon1 == "unreal") {icon1src = "https://img.shields.io/badge/-Unreal%20engine-000?&logo=unrealengine"}
+if (icon2 == "unreal") {icon2src = "https://img.shields.io/badge/-Unreal%20engine-000?&logo=unrealengine"}
+if (icon1 == "astro") {icon1src = "https://img.shields.io/badge/-Astro-000?&logo=astro"}
+if (icon2 == "astro") {icon2src = "https://img.shields.io/badge/-Astro-000?&logo=astro"}
+if (icon1 == "tailwind") {icon1src = "https://img.shields.io/badge/-Tailwind-000?&logo=tailwindcss"}
+if (icon2 == "tailwind") {icon2src = "https://img.shields.io/badge/-Tailwind-000?&logo=tailwindcss"}
+if (icon1 == "blender") {icon1src = "https://img.shields.io/badge/-Blender-000?&logo=blender"}
+if (icon2 == "blender") {icon2src = "https://img.shields.io/badge/-Blender-000?&logo=blender"}
+if (icon2 == "hackatime") {icon2src = hackatime}
+---
+
+<div id="Project Info">
+        <main class="pl-25">
+                <h1 id="title" class="text-6xl font-bold pt-15 text-purple-800"> {title}</h1>
+                <div id="images" class="w-screen relative">
+                    <img id="thumbnail" src={thumbnail.src} alt="thumbnail" class="right-65 w-135 h-90 rounded-3xl text-white absolute">
+                </div>
+                <ul id="languages" class="flex gap-x-4 py-4">
+                {icon1 == "unreal" && (<li><img id="language1" src={icon1src} class="w-30.5"/></li>)}
+                {icon1 != "unreal" && (<li><img id="language1" src={icon1src} class="w-21.5"/></li>)} 
+                {icon2 == "unreal" && (<li><img id="language2" src={icon2src} class="w-30.5"/></li>)}
+                {icon2 != "unreal" && icon2 != "hackatime" && (<li><img id="language2" src={icon2src} class="w-21.5"/></li>)}
+                {icon2 == "hackatime" && (<li><img id="hackatime" src={icon2src} class="w-37.5"/></li>)}
+                {icon2 != "hackatime" && (<li><img id="hackatime" src={hackatime} class="w-37.5"/></li>)}
+                </ul>
+                <section id="intro" class="text-2xl pt-3 text-purple-800">
+                    <p id="intro" class="max-w-2xl font-bold"> {intro} </p>
+                    <br>
+                    <p id="why" class="max-w-2xl"> {why} </p>
+                </section>
+                <section id="readme" class="text-xl pt-3 text-green-700">
+                    <p id="readme" class="max-w-2xl"> {readme} </p>
+
+                </section>
+            </main>
+</div>

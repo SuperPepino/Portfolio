@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectTile from '../components/ProjectTile.astro';
+
+---
+
+<Layout title="Pepino's Projects">   
+    <main class="z-10 pl-25">
+        <br><br>
+        <h1 class="text-5xl font-bold bg-linear-to-r from-green-700 via-blue-700 to-green-700 bg-clip-text text-transparent w-70">My projects</h1>
+        <br>
+        <section id="active" class="">
+            <h1 class="text-4xl font-bold py-5 bg-linear-to-r from-blue-700 to-green-700 bg-clip-text text-transparent w-30">Active:</h1>
+            <ul class="flex gap-x-4 list-none">
+            <li><ProjectTile title="Python Login" image="src/assets/thumbnails/login.png" project="PythonLogin" icon1="python" hackatime="https://img.shields.io/badge/hackatime-11h%2019m-purple"/></li>
+            <li><ProjectTile title="Horror Game" image="src/assets/thumbnails/horrorgame.png" project="HorrorGame" icon1="unreal" icon2="blender" hackatime="https://img.shields.io/badge/hackatime-59h%2041m-purple"/></li>
+            <li><ProjectTile title="Portfolio" image="src/assets/thumbnails/portfolio.png" project="Portfolio" icon1="astro" icon2="tailwind" hackatime="https://hackatime.hackclub.com/api/v1/badge/U08BJ25057T/SuperPepino/Portfolio"/></li>
+            </ul>
+        </section>
+        <br><br><br><br>
+        <section id="completed" class="">
+            <h1 class="text-4xl font-bold py-5 bg-linear-to-r from-blue-700 to-green-700 bg-clip-text text-transparent w-50">Completed: </h1>
+            <ul class="flex gap-x-5 list-none">
+            <li><ProjectTile title="Python Login" image="src/assets/thumbnails/login.png" project="PythonLogin" icon1="python" icon2="tailwind"/></li>
+            <li><ProjectTile title="Horror Game" image="src/assets/thumbnails/horrorgame.png" project="HorrorGame" icon1="unreal" icon2="blender"/></li>
+            </ul>
+        </section>
+    </main>
+        
+    </div>
+	
+</Layout>

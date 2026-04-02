@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+.google-sans-GoogleSans {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
+
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 7.5px;
+  color: rgb(172, 176, 182);
+}
+
+.nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 4px;
+  background-color: rgb(0, 92, 177);
+  transition: width 0.5s ease;
+}
+
+.nav-link:hover:after {width: 100%;}
+
+.nav-link.active:after {width: 100%;}

@@ -1,0 +1,46 @@
+---
+interface Props {
+    title: string;
+    image: string;  
+    project: string;
+    icon1: string;
+    icon2?: string;
+    hackatime?: string;
+    alt?: string;
+    icon1src?: string;
+    icon2src?: string;
+}
+
+let icon1src = ""
+let icon2src = ""
+
+const{title = "Placeholder", image = "Image", project = "Project", icon1 = "language1", icon2 = "language2", alt = "thumbnail", hackatime} = Astro.props
+
+if (icon1 == "python") {icon1src = "https://img.shields.io/badge/-Python-000?&logo=Python"}
+if (icon2 == "python") {icon2src = "https://img.shields.io/badge/-Python-000?&logo=Python"}
+if (icon1 == "html") {icon1src = "https://img.shields.io/badge/-HTML-000?&logo=HTML5"}
+if (icon2 == "html") {icon2src = "https://img.shields.io/badge/-HTML-000?&logo=HTML5"}
+if (icon1 == "unreal") {icon1src = "https://img.shields.io/badge/-Unreal%20engine-000?&logo=unrealengine"}
+if (icon2 == "unreal") {icon2src = "https://img.shields.io/badge/-Unreal%20engine-000?&logo=unrealengine"}
+if (icon1 == "astro") {icon1src = "https://img.shields.io/badge/-Astro-000?&logo=astro"}
+if (icon2 == "astro") {icon2src = "https://img.shields.io/badge/-Astro-000?&logo=astro"}
+if (icon1 == "tailwind") {icon1src = "https://img.shields.io/badge/-Tailwind-000?&logo=tailwindcss"}
+if (icon2 == "tailwind") {icon2src = "https://img.shields.io/badge/-Tailwind-000?&logo=tailwindcss"}
+if (icon1 == "blender") {icon1src = "https://img.shields.io/badge/-Blender-000?&logo=blender"}
+if (icon2 == "blender") {icon2src = "https://img.shields.io/badge/-Blender-000?&logo=blender"}
+
+---
+<div id="tile" class="bg-linear-to-br from-gray-950 via-purple-950 to-gray-950 rounded-3xl size-max w-64 aspect-square overflow-x-hidden mx-auto my-auto border-black border-2">
+    <a href={`/Projects/${project}`}>
+        <img id="thumbnail" src={image} alt={alt} class="object-center w-sm max-h-35 object-cover ">
+    <h1 class="text-center text-3xl text-cyan-600">{title}</h1>
+    
+    <ul class="flex justify-center">
+        <li><img id="language1" src={icon1src} class="px-2 py-2"/></li>
+        <li><img id="language2" src={icon2src} class="px-2 py-2"/></li>
+    </ul>
+    <ul class="flex justify-center">
+        <li><img id="hackatimetime" src={hackatime} class="pt-4"/></li>
+    </ul>
+    </a>
+</div>

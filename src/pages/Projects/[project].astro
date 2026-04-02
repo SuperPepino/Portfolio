@@ -1,0 +1,46 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import background from "../../assets/background2.svg";
+import ProjectPage from "../../components/ProjectPage.astro";
+import horrorgameThumbnail from "../../assets/thumbnails/horrorgame.png";
+import pythonloginThumbnail from "../../assets/thumbnails/login.png";
+
+
+
+export function getStaticPaths() {
+    return [
+        {params: {project: "HorrorGame"}},
+        {params: {project: "PythonLogin"}},
+        {params: {project: "MyWebsite"}}
+    ];
+}
+
+const {project} = Astro.params;
+
+
+---
+{project == "HorrorGame" && (
+    <Layout title = "Horror Game">
+        <ProjectPage 
+        title="Horror Game" icon1="unreal" icon2="blender"
+        hackatime="https://img.shields.io/badge/hackatime-59h%2041m-purple" thumbnail={horrorgameThumbnail}
+        intro="Yo"
+        why="test"
+        />
+    </Layout>
+)}
+
+{project == "PythonLogin" && (
+    <Layout title = "Horror Game">
+        <ProjectPage 
+        title="Python Login" icon1="python" icon2="hackatime"
+        hackatime="https://img.shields.io/badge/hackatime-11h%2019m-purple" thumbnail={pythonloginThumbnail}
+        intro="This is a simple login system built using python. It is made for backend and used in the terminal 
+        but does have colors for a good aesthethic. It is lightweight and includes features like banning and messaging"
+        why="This is my first project I have made. The idea was that it is a simple login system built in python, 
+        because that was what I was learning. I made it as a way of learning python. With that it is not the most 
+        complex project ive made but definitely a memorable one." 
+        />
+    </Layout>
+)}
