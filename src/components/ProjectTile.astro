@@ -1,7 +1,9 @@
 ---
+import type { ImageFunction } from 'astro:content';
+
 interface Props {
     title: string;
-    image: string;  
+    image: ImageMetadata;  
     project: string;
     icon1: string;
     icon2?: string;
@@ -14,7 +16,7 @@ interface Props {
 let icon1src = ""
 let icon2src = ""
 
-const{title = "Placeholder", image = "Image", project = "Project", icon1 = "language1", icon2 = "language2", alt = "thumbnail", hackatime} = Astro.props
+const{title = "Placeholder", image, project = "Project", icon1 = "language1", icon2 = "language2", alt = "thumbnail", hackatime} = Astro.props
 
 if (icon1 == "python") {icon1src = "https://img.shields.io/badge/-Python-000?&logo=Python"}
 if (icon2 == "python") {icon2src = "https://img.shields.io/badge/-Python-000?&logo=Python"}
@@ -32,15 +34,15 @@ if (icon2 == "blender") {icon2src = "https://img.shields.io/badge/-Blender-000?&
 ---
 <div id="tile" class="bg-linear-to-br from-gray-950 via-purple-950 to-gray-950 rounded-3xl size-max w-64 aspect-square overflow-x-hidden mx-auto my-auto border-black border-2">
     <a href={`/Projects/${project}`}>
-        <img id="thumbnail" src={image} alt={alt} class="object-center w-sm max-h-35 object-cover ">
-    <h1 class="text-center text-3xl text-cyan-600">{title}</h1>
+        <img id="thumbnail" src={image.src} alt={alt} class="object-center w-sm max-h-35 object-cover ">
+        <h1 class="text-center text-3xl text-cyan-600">{title}</h1>
     
-    <ul class="flex justify-center">
-        <li><img id="language1" src={icon1src} class="px-2 py-2"/></li>
-        <li><img id="language2" src={icon2src} class="px-2 py-2"/></li>
-    </ul>
-    <ul class="flex justify-center">
-        <li><img id="hackatimetime" src={hackatime} class="pt-4"/></li>
-    </ul>
+        <ul class="flex justify-center">
+            <li><img id="language1" src={icon1src} class="px-2 py-2"/></li>
+            <li><img id="language2" src={icon2src} class="px-2 py-2"/></li>
+        </ul>
+        <ul class="flex justify-center">
+            <li><img id="hackatimetime" src={hackatime} class="pt-4"/></li>
+        </ul>
     </a>
 </div>

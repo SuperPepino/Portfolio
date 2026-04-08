@@ -1,0 +1,14 @@
+---
+
+import {getCollection} from "astro:content";
+
+const devlog = await getCollection("devlogs")
+console.log(devlog)
+---
+
+<html>
+<body>
+<p>Number of devlogs: {devlog.length}</p>
+</body>
+</html>
+

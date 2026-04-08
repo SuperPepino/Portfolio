@@ -1,11 +1,43 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import pfp from "../assets/pfp.jpg";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="Pepino's Portfolio">
+    <main class="py-30 pr-50 relative">
+        <div id="short-about" class="right-25 w-275 h-130 px-15 py-7.5 rounded-4xl bg-linear-to-br from-gray-500 via-gray-600 to-gray-500 text-2xl font-bold text-black absolute ">
+            
+            <img src={pfp.src} class="absolute top-15 right-10 max-w-100 object-cover object-center rounded-3xl border-2 border-black"/>
 
+            <section id="simple-info" class="w-140">
+            <p>Hi,</p>
+            <p>My name is pepino, I am a teen programmer from the netherlands. I make mostly frontend websites and games but 
+                also some simple backend things with for example python.</p>
+            <p>I am always working hard to achieve my dreams, although I do have too many. I am also a big believer in working 
+                yourself to achieve things and wish to always be doing something useful to achieving those things.</p>
+                <br>
+            <p>I am also a follower of our lord and saviour Jesus Christ ✞</p>
+            </section>
+            
+
+
+            <div class="w-40 h-12.5 py-1.5 bg-gray-700 rounded-2xl border-2 border-gray-800 cursor-pointer select-none">
+                <a href="/about" class="font-bold text-black text-center">
+                    <p class="mx-auto">More</p>
+                </a>
+            </div>
+            <div id="border" class="right-1 top-1 w-273 h-128 px-15 py-7.5 rounded-4xl pointer-events-none text-2xl font-bold text-black absolute border-4 border-gray-950"></div>
+        </div>
+
+        <section id="recent-devlogs" class="absolute top-175 left-75 h-150">
+            <h1 class="bg-linear-to-r from-blue-900 via-magenta-800 to-purple-900 text-transparent bg-clip-text text-4xl font-bold w-70 h-12">Recent Devlogs:</h1>
+            <h1 class="bg-linear-to-r from-white via-gray-200 to-white text-transparent bg-clip-text text-3xl font-bold w-100 h-15 py-5 px-5">Coming soon...</h1>
+            <ul class="flex gap-x-5 list-none"></ul>
+            </ul>
+        </section>
+    </main>
 </Layout>

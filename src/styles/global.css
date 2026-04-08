@@ -31,3 +31,17 @@
 .nav-link:hover:after {width: 100%;}
 
 .nav-link.active:after {width: 100%;}
+
+.readmebutton {
+  display: none;
+  height: 0;
+  overflow: hidden;
+}
+
+.readmebutton:after {
+  max-height: 0;
+  transition: max-height max-height 1s ease;
+
+}
+
+.readmebutton:

@@ -5,14 +5,14 @@ import background from "../../assets/background2.svg";
 import ProjectPage from "../../components/ProjectPage.astro";
 import horrorgameThumbnail from "../../assets/thumbnails/horrorgame.png";
 import pythonloginThumbnail from "../../assets/thumbnails/login.png";
-
-
+import portfolioThumbnail from "../../assets/thumbnails/portfolio.png";
+import "../../styles/global.css";
 
 export function getStaticPaths() {
     return [
         {params: {project: "HorrorGame"}},
         {params: {project: "PythonLogin"}},
-        {params: {project: "MyWebsite"}}
+        {params: {project: "Portfolio"}}
     ];
 }
 
@@ -24,9 +24,15 @@ const {project} = Astro.params;
     <Layout title = "Horror Game">
         <ProjectPage 
         title="Horror Game" icon1="unreal" icon2="blender"
-        hackatime="https://img.shields.io/badge/hackatime-59h%2041m-purple" thumbnail={horrorgameThumbnail}
-        intro="Yo"
-        why="test"
+        readme=""
+        hackatime="https://img.shields.io/badge/hackatime-59h%2041m-purple"
+        repository="" thumbnail={horrorgameThumbnail}
+        intro="I am making a mascot horror game that takes place in a shut down theme park. 
+        You are a youtuber that wants to record a video exploring, but something goes terribly wrong"
+        why="I made this project because I wanted to find out how it is to make a game fully by myself. 
+        I chose for the horror theme because I myself love playing simple short horror games that have 
+        a good story and a lot of secrets that you can find while playing. I chose for a theme park because 
+        it is nostalgic and can really well be made scary"
         />
     </Layout>
 )}
@@ -35,12 +41,31 @@ const {project} = Astro.params;
     <Layout title = "Horror Game">
         <ProjectPage 
         title="Python Login" icon1="python" icon2="hackatime"
-        hackatime="https://img.shields.io/badge/hackatime-11h%2019m-purple" thumbnail={pythonloginThumbnail}
+        readme="login"
+        hackatime="https://img.shields.io/badge/hackatime-11h%2019m-purple"
+        repository="https://github.com/SuperPepino/simpleloginV1" thumbnail={pythonloginThumbnail}
         intro="This is a simple login system built using python. It is made for backend and used in the terminal 
         but does have colors for a good aesthethic. It is lightweight and includes features like banning and messaging"
         why="This is my first project I have made. The idea was that it is a simple login system built in python, 
         because that was what I was learning. I made it as a way of learning python. With that it is not the most 
         complex project ive made but definitely a memorable one." 
+        />
+    </Layout>
+)}
+
+{project == "Portfolio" && (
+    <Layout title = "Pepino's Portfolio">
+        <ProjectPage 
+        title="My Portfolio" icon1="astro" icon2="tailwind"
+        readme=""
+        hackatime="https://hackatime.hackclub.com/api/v1/badge/U08BJ25057T/SuperPepino/Portfolio"
+        repository="https://github.com/SuperPepino/Portfolio" thumbnail={portfolioThumbnail}
+        intro="This is my portfolio website. Here I post about my projects, talk about myself and tell my story. 
+        It is build with astro and using tailwindcss as an easier way of using css"
+        why="This is one of my projects that will never end developments. My idea was to just make a way for people to see what 
+        I build and what I am building currently and to also follow my story. I made it as a way of learning astro but also as a 
+        method of being able to tell people about what I do and who I am. With that said I will keep on updating thiss once in a while 
+        and you will definitely see it improve if you check on it somewhat often." 
         />
     </Layout>
 )}
