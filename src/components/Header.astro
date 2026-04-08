@@ -16,8 +16,8 @@ const currentPath = Astro.url.pathname;
         
         <ul class="flex gap-x-8">
             <li><a href="/" class={`nav-link font-bold ${currentPath === "/" ? "active" : ""}`}>Home</a></li>
-            <li><a href="/projects" class={`nav-link font-bold ${currentPath === "/projects" ? "active" : ""}`}>Projects</a></li>
-            <li><a href="/about" class={`nav-link font-bold ${currentPath === "/about" ? "active" : ""}`}>About</a></li>
+            <li><a href="/projects" class={`nav-link font-bold ${currentPath.startsWith("/projects") ? "active" : ""}`}>Projects</a></li>
+            <li><a href="/about" class={`nav-link font-bold ${currentPath.startsWith("/about") ? "active" : ""}`}>About</a></li>
         </ul>
     </div>
 </header>
