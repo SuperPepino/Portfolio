@@ -68,9 +68,6 @@ Soon? Maybe
 - 📃 Devlogs
 - 🛡️ Logging in to post, comment and like
 - 👀 More visuals
-- Database support (SQLite)
-- Logging system
-- Admin tools / interface
 
 ---
 
@@ -79,7 +76,7 @@ Soon? Maybe
 - 🐛 Found a bug? Open an issue  
 - 💡 Have an idea? Suggest a feature  
 
-All ideas  are welcome.
+All ideas are welcome.
 
 ---
 ## 🤖 AI declaration
