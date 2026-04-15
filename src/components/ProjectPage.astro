@@ -44,42 +44,46 @@ if (icon2 == "hackatime") {icon2src = hackatime}
 ---
 
 <div id="Project Info">
-        <main class="pl-25">
-                <h1 id="title" class="text-6xl font-bold pt-15 text-purple-800"> {title}</h1>
-                <div id="images" class="w-screen relative">
-                    <img id="thumbnail" src={thumbnail.src} alt="thumbnail" class="right-60 w-135 h-90 rounded-3xl text-white absolute border-2 border-stone-400">
-                </div>
-                <ul id="languages" class="flex gap-x-4 py-4">
-                {icon1 == "unreal" && (<li><img id="language1" src={icon1src} class="w-30.5"/></li>)}
-                {icon1 == "tailwind" && (<li><img id="language1" src={icon1src} class="w-28"/></li>)}
-                {icon1 != "unreal" && icon1 != "tailwind" && (<li><img id="language1" src={icon1src} class="w-21.5"/></li>)} 
-                {icon2 == "unreal" && (<li><img id="language1" src={icon2src} class="w-30.5"/></li>)}
-                {icon2 == "tailwind" && (<li><img id="language1" src={icon2src} class="w-28"/></li>)}
-                {icon2 != "unreal" && icon2 != "hackatime" && icon2 != "tailwind" && (<li><img id="language2" src={icon2src} class="w-21.5"/></li>)}
-                {icon2 == "hackatime" && (<li><img id="hackatime" src={icon2src} class="w-37.5"/></li>)}
-                {icon2 != "hackatime" && (<li><img id="hackatime" src={hackatime} class="w-37.5"/></li>)}
-                </ul>
-                <section id="intro" class="text-2xl pt-3 text-purple-800">
-                    <p id="intro" class="text-3xl max-w-2xl font-bold"> {intro} </p>
-                    <br>
-                    <p id="why" class="max-w-180"> {why} </p>
-                </section>
-                <ul id="buttons" class="flex gap-x-15 list-none">
-                    <li><section id="readme" class="text-xl pt-3">
-                        <details class="group w-55">
-                            <summary class="text-center cursor-pointer select-none bg-linear-to-br from-gray-950 via-purple-950 to-gray-950 text-white border-2 border-black rounded-2xl px-4 py-3 list-none group-open:rounded-b-none hover:bg-gray-700">Readme</summary>
-                            <div class="h-full w-260 bg-black text-stone-300 px-4 py-3 text-center rounded-2xl group-open:rounded-tl-none">
-                                {Content ? <Content/> : <p class="font-bold">!No Readme For This Project Yet!</p>}
-                            </div>
-                        </details>
-                    </section></li>
-                    <li class="pt-3">
-                        <a href={repository}>
-                            <div class="text-xl text-center w-55 cursor-pointer select-none bg-linear-to-br from-gray-950 via-purple-950 to-gray-950 text-white border-2 border-black rounded-2xl px-4 py-3 list-none hover:bg-gray-700">
-                                <p>Github Repository</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </main>
+        <main class="lg:ml-25 mt-15">
+            <ul class="flex flex-col-reverse lg:flex-row w-full items-start">
+                <li class="justify-start w-full lg:w-1/2">
+                    <h1 id="title" class="text-6xl font-bold text-purple-800 w-full"> {title}</h1>
+                    <ul id="languages" class="flex gap-x-4 py-4">
+                    {icon1 == "unreal" && (<li><img id="language1" src={icon1src} class="w-30.5"/></li>)}
+                    {icon1 == "tailwind" && (<li><img id="language1" src={icon1src} class="w-28"/></li>)}
+                    {icon1 != "unreal" && icon1 != "tailwind" && (<li><img id="language1" src={icon1src} class="w-21.5"/></li>)} 
+                    {icon2 == "unreal" && (<li><img id="language1" src={icon2src} class="w-30.5"/></li>)}
+                    {icon2 == "tailwind" && (<li><img id="language1" src={icon2src} class="w-28"/></li>)}
+                    {icon2 != "unreal" && icon2 != "hackatime" && icon2 != "tailwind" && (<li><img id="language2" src={icon2src} class="w-21.5"/></li>)}
+                    {icon2 == "hackatime" && (<li><img id="hackatime" src={icon2src} class="w-37.5"/></li>)}
+                    {icon2 != "hackatime" && (<li><img id="hackatime" src={hackatime} class="w-37.5"/></li>)}
+                    </ul>
+                    <section id="intro" class="text-2xl pt-3 text-purple-800">
+                        <p id="intro" class="text-center lg:text-left text-2xl lg:text-3xl max-w-full lg:max-w-2xl font-bold"> {intro} </p>
+                        <br>
+                        <p id="why" class="max-w-180"> {why} </p>
+                    </section>
+                    <ul id="buttons" class="flex flex-wrap gap-x-15 list-none">
+                        <li><section id="readme" class="text-xl pt-3">
+                            <details class="group w-55">
+                                <summary class="text-center cursor-pointer select-none bg-linear-to-br from-gray-950 via-purple-950 to-gray-950 text-white border-2 border-black rounded-2xl px-4 py-3 list-none group-open:rounded-b-none hover:bg-gray-700">Readme</summary>
+                                <div class="h-full w-screen max-w-260 bg-black text-stone-300 px-4 py-3 text-center rounded-2xl group-open:rounded-tl-none">
+                                    {Content ? <Content/> : <p class="font-bold">!No Readme For This Project Yet!</p>}
+                                </div>
+                            </details>
+                        </section></li>
+                        <li class="pt-3">
+                            <a href={repository}>
+                                <div class="text-xl text-center w-55 cursor-pointer select-none bg-linear-to-br from-gray-950 via-purple-950 to-gray-950 text-white border-2 border-black rounded-2xl px-4 py-3 list-none hover:bg-gray-700">
+                                    <p>Github Repository</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="flex justify-end w-full lg:w-1/2">
+                        <img id="thumbnail" src={thumbnail.src} alt="thumbnail" class="lg:mr-35 w-full max-w-lg h-auto rounded-3xl border-2 border-stone-400">
+                </li>
+            </ul>
+        </main>
 </div>

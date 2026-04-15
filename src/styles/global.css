@@ -32,16 +32,14 @@
 
 .nav-link.active:after {width: 100%;}
 
-.readmebutton {
-  display: none;
-  height: 0;
-  overflow: hidden;
+.btn {
+  @apply text-xl bg-transparent border-2 border-zinc-300 rounded-full px-4 py-2 text-zinc-300 hover:bg-gray-600 cursor-pointer select-none;
 }
 
-.readmebutton:after {
-  max-height: 0;
-  transition: max-height max-height 1s ease;
-
+.btn.active {
+  @apply bg-gray-700
 }
 
-.readmebutton:
+img {
+  color: white;
+}

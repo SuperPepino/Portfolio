@@ -1,4 +1,4 @@
----
+1---
 import Layout from "../layouts/Layout.astro"
 import pfp from "../assets/pfp.jpg"
 import timeline from "../assets/timeline.svg"
@@ -9,121 +9,172 @@ import highseas from "../assets/highseas.png"
 import coding from "../assets/coding.jpg"
 ---
 
-<Layout title="About Pepino">
-    <main class="py-30 pr-50 relative">
-        <div class="absolute left-30 -top-8">
-            <img src={timeline.src} class="w-50"/>
-        </div>
+<Layout title="About Pepino" opacity="opacity-85">
+    <main class="py-30 relative">
+        <div class="absolute left-1/2 top-0 h-full border-l-22 border-dashed border-zinc-100 -translate-x-1/2 hidden lg:block"></div>
 
-        <div id="intro-about" class="left-130 top-40 w-275 h-130 px-15 py-7.5 rounded-4xl bg-linear-to-br from-gray-500 via-gray-600 to-gray-500 text-2xl font-bold text-black absolute border-4 border-black">
-            
-            <img src={pfp.src} class="absolute top-15 right-10 max-w-100 object-cover object-center rounded-3xl border-2 border-black"/>
+        <ul class="flex flex-col gap-30">
+            <li class="flex justify-start lg:justify-start items-center w-full" >
+                <div class="hidden lg:block absolute left-1/2 -translate-x-1/2 w-15 h-15 rounded-full bg-white border-2 border-zinc-200"></div>
+                <div class="w-full lg:w-1/2 p-7.5 rounded-3xl bg-linear-to-br from-gray-400 via-gray-600 to-gray-400 text-2xl font-bold text-black border-4 border-black">
+                    <ul class="flex flex-col lg:flex-row lg:gap-0">
+                        <li class="flex w-full lg:flex-1">
+                            <div id="text" class="text-center lg:text-left">
+                                <h1 class="font-black text-3xl">About me:</h1>
+                                <p>My name is pepino, I am a teen programmer from the netherlands. I make mostly frontend websites and games but 
+                                    also some simple backend things with for example python.</p>
+                                <p>I am always working hard to achieve my dreams, although I do have too many. I am also a big believer in working 
+                                    yourself to achieve things and wish to always be doing something useful to achieving those things.</p>
+                                    <br>
+                                <p>I am also a follower of our lord and saviour Jesus Christ ✞</p>
+                            </div>
+                        </li>
+                        <li class="w-full lg:max-w-1/3 lg:max-h-5/6 lg:ml-auto justify-center lg:justify-end">
+                            <img src={pfp.src} 
+                            class="rounded-3xl border-2 border-black select-none"/>
+                        </li>
+                    </ul>
+                </div>
+            </li>
 
-            <section id="simple-info" class="w-140">
-            <h1 class="font-black text-3xl">About me:</h1>
-            <p>My name is pepino, I am a teen programmer from the netherlands. I make mostly frontend websites and games but 
-                also some simple backend things with for example python.</p>
-            <p>This page is my story on how I got to coding and how I plan to keep on coding.</p>
-                <br>
-            <p>Have fun reading...</p>
-            </section>
-            
-        </div>
-
-        <div id="beginning-about" class="left-100 top-290 w-275 h-130 px-15 py-7.5 rounded-4xl bg-linear-to-br from-gray-500 via-gray-600 to-gray-500 text-2xl font-bold text-black absolute border-4 border-black">
-            
-            <img src={gamestudio.src} class="absolute top-15 right-10 max-w-100 object-cover object-center rounded-3xl border-2 border-black"/>
-
-            <section id="simple-info" class="w-140">
-            <h1 class="font-black text-3xl">The Beginning:</h1>
-            <p>I got into coding around the corona period. We were all home from school and I was bored, so I decided to start making games. 
-                First very simple ones, with some game engine made by the dutch tv show het klokhuis. </p>
-            <p>Quickly I fell in love with the idea of creating 
-                something and other people actually playing and maybe even liking it</p>
-                <br>
-            <p>The engine that I used got shut down near the end of the corona period tho so it quickly ended. 
-                I did start with scratch but found it boring quickly so I fully stopped coding soon after.</p>
-            </section>
-        </div>
-
-        <div id="continue-about" class="left-125 top-450 w-275 h-130 px-15 py-7.5 rounded-4xl bg-linear-to-br from-gray-500 via-gray-600 to-gray-500 text-2xl font-bold text-black absolute border-4 border-black">
-            
-            <img src={highseas.src} class="absolute top-15 right-10 max-w-100 object-cover object-center rounded-3xl border-2 border-black"/>
-
-            <section id="simple-info" class="w-140">
-            <h1 class="font-black text-3xl">The Great Restart:</h1>
-            <p>When I got into high school I wasn't coding much anymore. Until about third grade of high school</p>
-            <p>When I was in third grade I became friends with someone else who loved coding and it was 
-                because of him and someone else I started coding again</p>
-                <br>
-            <p>For the first time I started actually using github codespaces and I started learning python to make 
-                my first project, a python based login system in the terminal</p>
-            </section>
-        </div>
-        
-        <div id="python-about" class="left-90 top-600 w-275 h-130 px-15 py-7.5 rounded-4xl bg-linear-to-br from-gray-500 via-gray-600 to-gray-500 text-2xl font-bold text-black absolute border-4 border-black">
-            
-            <img src={python.src} class="absolute top-15 right-10 max-w-100 object-cover object-center rounded-3xl border-2 border-black"/>
-
-            <section id="simple-info" class="w-140">
-            <h1 class="font-black text-3xl">My first Hack Club project:</h1>
-            <br>
-            <p>My friend introduced me to hack club in third grade.</p>
-            <p>I didnt know what it was at first but quickly got familiar with it. 
-                I made a slack account and joined my first ysws. High seas</p>
-                <br>
-            <p>I made a beginning on my first project, the python login script, 
-                I worked on it for a while until high seas ended. I did not have 
-                time to ship it so I kinda stopped working on it as a whole. 
-                I also did not finish it until about 2 years later</p>
-            </section>
-        </div>
-
-        <div id="current-about" class="left-115 top-780 w-275 h-150 px-15 py-7.5 rounded-4xl bg-linear-to-br from-gray-500 via-gray-600 to-gray-500 text-2xl font-bold text-black absolute border-4 border-black">
-            
-            <img src={horrorgame.src} class="absolute top-15 right-10 max-w-100 object-cover object-center rounded-3xl border-2 border-black"/>
-
-            <section id="simple-info" class="w-140">
-            <h1 class="font-black text-3xl">My own hack club:</h1>
-            <br>
-            <p>A little while ago now I started getting more active in the programming community again</p>
-            <p>I started my own Hack Club at school with the friend from earlier and started updating my login script again</p>
-                <br>
-            <p>I also recently started working on my first actual own game project. A mascot horror game inspired by popular games like garten
-                of banban and poppy playtime. I first made this just to just learn modelling, game making, simple coding,
-                using engines and more but my ideas are becoming more and more of a reality every time I work on it.
-            </p>
-            </section>
-        </div>
-
-        <div id="now-about" class="left-130 top-935 w-275 h-130 px-15 py-7.5 rounded-4xl bg-linear-to-br from-gray-500 via-gray-600 to-gray-500 text-2xl font-bold text-black absolute border-4 border-black">
-            
-            <img src={coding.src} class="absolute top-15 right-10 max-w-100 max-h-100 object-cover object-center rounded-3xl border-2 border-black"/>
-
-            <section id="simple-info" class="w-140">
-            <h1 class="font-black text-3xl">What now?</h1>
-            <br>
-            <p>My story continues as I learn more and more</p>
-            <p>I made this website to report on what I am doing and I probably will update it on new projects and developments once in a while. 
-                I will also update it with devlogs really soon where you will be able to track everything I do and make.
-            </p>
-                <br>
-            <p>As I learn more and more about hacking and coding I will hopefully one day be good at it.
-            </p>
-            <p>Hope you liked reading my story. For now, Pepino out.
-            </p>
-            </section>
-        </div>
-
-        <div id="now-about" class="left-100 top-1090 w-275 h-130 px-15 py-7.5 rounded-4xl bg-linear-to-br from-gray-500 via-gray-600 to-gray-500 text-2xl font-bold text-black absolute border-4 border-black">
-            
-            <img src={horrorgame.src} class="absolute top-15 right-10 max-w-100 object-cover object-center rounded-3xl border-2 border-black"/>
-
-            <section id="simple-info" class="w-140">
-            <h1 class="font-black text-3xl">Coming soon...</h1>
-            <br>
-            <p>...</p>
-            </section>
-        </div>
+            <li class="flex justify-start lg:justify-end items-center w-full" >
+                <div class="hidden lg:block absolute left-1/2 -translate-x-1/2 w-15 h-15 rounded-full bg-white border-2 border-zinc-200"></div>
+                <div class="w-full lg:w-1/2 p-7.5 rounded-3xl bg-linear-to-br from-gray-400 via-gray-600 to-gray-400 text-2xl font-bold text-black border-4 border-black">
+                    <ul class="flex flex-col lg:flex-row lg:gap-0">
+                        <li class="flex w-full lg:flex-1">
+                            <div id="text" class="text-center lg:text-left">
+                                <h1 class="font-black text-3xl">The Beginning:</h1>
+                                <p>I got into coding around the corona period. We were all home from school and I was bored, so I decided to start making games. 
+                                    First very simple ones, with some game engine made by the dutch tv show het klokhuis. </p>
+                                <p>Quickly I fell in love with the idea of creating 
+                                    something and other people actually playing and maybe even liking it</p>
+                                    <br>
+                                <p>The engine that I used got shut down near the end of the corona period tho so it quickly ended. 
+                                    I did start with scratch but found it boring quickly so I fully stopped coding soon after.</p>
+                            </div>
+                        </li>
+                        <li class="w-full lg:max-w-1/3 lg:max-h-5/6 lg:ml-auto justify-center lg:justify-end">
+                            <img src={gamestudio.src} 
+                            class="rounded-3xl border-2 border-black select-none"/>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="flex justify-start lg:justify-between items-center w-full" >
+                <div class="hidden lg:block absolute left-1/2 -translate-x-1/2 w-15 h-15 rounded-full bg-white border-2 border-zinc-200"></div>
+                <div class="w-full lg:w-1/2 p-7.5 rounded-3xl bg-linear-to-br from-gray-400 via-gray-600 to-gray-400 text-2xl font-bold text-black border-4 border-black">
+                    <ul class="flex flex-col lg:flex-row lg:gap-0">
+                        <li class="flex w-full lg:flex-1">
+                            <div id="text" class="text-center lg:text-left">
+                                <h1 class="font-black text-3xl">The Great Restart:</h1>
+                                <p>When I got into high school I wasn't coding much anymore. Until about third grade of high school</p>
+                                <p>When I was in third grade I became friends with someone else who loved coding and it was 
+                                    because of him and someone else I started coding again</p>
+                                    <br>
+                                <p>For the first time I started actually using github codespaces and I started learning python to make 
+                                    my first project, a python based login system in the terminal</p>
+                            </div>
+                        </li>
+                        <li class="w-full lg:max-w-1/3 lg:max-h-5/6 lg:ml-auto justify-center lg:justify-end">
+                            <img src={highseas.src} 
+                            class="rounded-3xl border-2 border-black select-none"/>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="flex justify-start lg:justify-end items-center w-full" >
+                <div class="hidden lg:block absolute left-1/2 -translate-x-1/2 w-15 h-15 rounded-full bg-white border-2 border-zinc-200"></div>
+                <div class="w-full lg:w-1/2 p-7.5 rounded-3xl bg-linear-to-br from-gray-400 via-gray-600 to-gray-400 text-2xl font-bold text-black border-4 border-black">
+                    <ul class="flex flex-col lg:flex-row lg:gap-0">
+                        <li class="flex w-full lg:flex-1">
+                            <div id="text" class="text-center lg:text-left">
+                                <h1 class="font-black text-3xl">My first Hack Club project:</h1>
+                                <br>
+                                <p>My friend introduced me to hack club in third grade.</p>
+                                <p>I didnt know what it was at first but quickly got familiar with it. 
+                                    I made a slack account and joined my first ysws. High seas</p>
+                                    <br>
+                                <p>I made a beginning on my first project, the python login script, 
+                                    I worked on it for a while until high seas ended. I did not have 
+                                    time to ship it so I kinda stopped working on it as a whole. 
+                                    I also did not finish it until about 2 years later</p>
+                            </div>
+                        </li>
+                        <li class="w-full lg:max-w-1/3 lg:max-h-5/6 lg:ml-auto justify-center lg:justify-end">
+                            <img src={python.src} 
+                            class="rounded-3xl border-2 border-black select-none"/>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="flex justify-start lg:justify-start items-center w-full" >
+                <div class="hidden lg:block absolute left-1/2 -translate-x-1/2 w-15 h-15 rounded-full bg-white border-2 border-zinc-200"></div>
+                <div class="w-full lg:w-1/2 p-7.5 rounded-3xl bg-linear-to-br from-gray-400 via-gray-600 to-gray-400 text-2xl font-bold text-black border-4 border-black">
+                    <ul class="flex flex-col lg:flex-row lg:gap-0">
+                        <li class="flex w-full lg:flex-1">
+                            <div id="text" class="text-center lg:text-left">
+                                <h1 class="font-black text-3xl">My own hack club:</h1>
+                                <br>
+                                <p>A little while ago now I started getting more active in the programming community again</p>
+                                <p>I started my own Hack Club at school with the friend from earlier and started updating my login script again</p>
+                                    <br>
+                                <p>I also recently started working on my first actual own game project. A mascot horror game inspired by popular games like garten
+                                    of banban and poppy playtime. I first made this just to just learn modelling, game making, simple coding,
+                                    using engines and more but my ideas are becoming more and more of a reality every time I work on it.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="w-full lg:max-w-1/3 lg:max-h-5/6 lg:ml-auto justify-center lg:justify-end">
+                            <img src={horrorgame.src} 
+                            class="rounded-3xl border-2 border-black select-none"/>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="flex justify-start lg:justify-end items-center w-full" >
+                <div class="hidden lg:block absolute left-1/2 -translate-x-1/2 w-15 h-15 rounded-full bg-white border-2 border-zinc-200"></div>
+                <div class="w-full lg:w-1/2 p-7.5 rounded-3xl bg-linear-to-br from-gray-400 via-gray-600 to-gray-400 text-2xl font-bold text-black border-4 border-black">
+                    <ul class="flex flex-col lg:flex-row lg:gap-0">
+                        <li class="flex w-full lg:flex-1">
+                            <div id="text" class="text-center lg:text-left">
+                                <h1 class="font-black text-3xl">What now?</h1>
+                                <br>
+                                <p>My story continues as I learn more and more</p>
+                                <p>I made this website to report on what I am doing and I probably will update it on new projects and developments once in a while. 
+                                    I will also update it with devlogs really soon where you will be able to track everything I do and make.
+                                </p>
+                                    <br>
+                                <p>As I learn more and more about hacking and coding I will hopefully one day be good at it.
+                                </p>
+                                <p>Hope you liked reading my story. For now, Pepino out.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="w-full lg:max-w-1/3 lg:max-h-5/6 lg:ml-auto justify-center lg:justify-end">
+                            <img src={coding.src} 
+                            class="rounded-3xl border-2 border-black select-none"/>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="flex justify-start lg:justify-start items-center w-full" >
+                <div class="hidden lg:block absolute left-1/2 -translate-x-1/2 w-15 h-15 rounded-full bg-white border-2 border-zinc-200"></div>
+                <div class="w-full lg:w-1/2 p-7.5 rounded-3xl bg-linear-to-br from-gray-400 via-gray-600 to-gray-400 text-2xl font-bold text-black border-4 border-black">
+                    <ul class="flex flex-col lg:flex-row lg:gap-0">
+                        <li class="flex w-full lg:flex-1">
+                            <div id="text" class="text-center lg:text-left">
+                                <h1 class="font-black text-3xl">Coming soon...</h1>
+                                <br>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li class="w-full lg:max-w-1/3 lg:max-h-5/6 lg:ml-auto justify-center lg:justify-end">
+                            <img src={horrorgame.src} 
+                            class="rounded-3xl border-2 border-black select-none"/>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
     </main>
-</Layout>
+</layout>

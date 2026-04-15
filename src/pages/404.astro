@@ -1,0 +1,34 @@
+---
+import background from "../assets/background.svg";
+import "../styles/global.css"
+import mad from "../assets/mad.png";
+---
+<!doctype HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Error" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>404 Error</title>
+	</head>
+    <body class="min-h-screen size-full">
+        <div class="min-h-screen min-w-full bg-gray-900 relative overflow-x-hidden py-65">
+            <div class="min-h-screen absolute inset-0 bg-cover bg-center blur-3xl opacity-60 pointer-events-none" style={`background-image: url(${background.src});`}>
+			</div>
+			<div class="text-center mx-auto w-full bg-transparent rounded-4xl">
+				<img src={mad.src} alt="mad" class="mx-auto h-50 w-50 object-center"/>
+				<h1 class="text-7xl font-bold text-red-800">404...</h1>
+				<h1 class="text-3xl font-bold text-white py-5">The page is not inside pepinos portfolio</h1>
+				<p class="text-2xl text-white w-100 mx-auto">The page your looking for doesn't seem to exist.</p>
+				<a href="/">
+					<div class="bg-gray-700 text-white border-4 border-black hover:bg-gray-500 rounded-xl py-1 px-4 w-50 mx-auto my-2">
+						<p>Return to base</p>
+					</div>
+				</a>
+			</div>
+        </div>
+	</body>
+</html>
