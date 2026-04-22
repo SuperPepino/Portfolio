@@ -1,9 +1,12 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import { getCollection } from "astro:content";
+
+const devlogs = await getCollection("devlogs")
+
 import Layout from '../layouts/Layout.astro';
 import pfp from "../assets/pfp.jpg";
-import astroicon from "../assets/icons/astro.svg";
 import "../styles/global.css";
+import DevlogList from "../components/DevlogList.astro"
 ---
 
 <Layout title="Pepino's Portfolio">
@@ -56,10 +59,11 @@ import "../styles/global.css";
             </li>
         </ul>
 
-        <section id="recent-devlogs" class="ml-[2.7%] h-150 py-5">
-            <h1 class="bg-linear-to-r from-blue-700 via-orange-700 to-pink-700 text-transparent bg-clip-text text-4xl font-bold w-75 h-12">Recent Devlogs:</h1>
-            <h1 class="bg-linear-to-r from-white via-gray-200 to-white text-transparent bg-clip-text text-3xl font-bold w-100 h-15 py-5 px-5">Coming soon...</h1>
-            <ul class="flex gap-x-5 list-none"></ul>
+        <section id="recent-devlogs" class="ml-[2.7%] py-5">
+            <details class="group">
+                <summary class="text-center cursor-pointer select-none list-none"><h1 class="bg-linear-to-r from-blue-700 via-orange-700 to-pink-700 hover:from-pink-700 hover:via-orange-700 hover:to-blue-700 text-transparent bg-clip-text text-4xl font-bold w-125 h-12 mb-12 hover:underline">Click to see recent Devlogs:</h1></summary>
+                <DevlogList devlogs={devlogs}/>
+            </details>
             </ul>
         </section>
     </main>

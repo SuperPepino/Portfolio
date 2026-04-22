@@ -1,0 +1,13 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Devlog from "./ProjectPageDevlog.astro";
+type Props = {
+    devlogs: CollectionEntry<"devlogs">[];
+    category: string;
+};
+
+const { devlogs, category } = Astro.props;
+---
+<div class="flex flex-col-reverse gap-y-10 lg:gap-y-24 mb-24 w-full lg:w-1/2 mx-auto">
+    {devlogs.filter((devlog) => category == devlog.data.project).map((devlog) => (<Devlog devlog={devlog} folder={category}/>))}
+</div>

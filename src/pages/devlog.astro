@@ -1,14 +1,12 @@
 ---
+import Layout from "../layouts/Layout.astro"
+import DevlogList from "../components/DevlogList.astro"
+import { getCollection } from "astro:content";
 
-import {getCollection} from "astro:content";
-
-const devlog = await getCollection("devlogs")
-console.log(devlog)
+const devlogs = await getCollection("devlogs")
 ---
-
-<html>
-<body>
-<p>Number of devlogs: {devlog.length}</p>
-</body>
-</html>
-
+<Layout title="Devlogs" opacity="10">
+        <main class="py-5 lg:py-10 relative min-h-screen w-full">
+                <DevlogList devlogs={devlogs}/>
+        </main>
+</Layout>

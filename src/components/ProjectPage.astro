@@ -1,9 +1,14 @@
 ---
 import type { MarkdownInstance } from 'astro';
 import type { ImageFunction } from 'astro:content';
+import Devlogs from "./ProjectPageDevlogList.astro";
+import { getCollection } from "astro:content";
+
+const devlogs = await getCollection("devlogs")
 
 interface Props{
     title: string;
+    category: string;
     icon1: string;
     icon2?: string;
     hackatime: string;
@@ -22,7 +27,7 @@ interface Props{
 let icon1src = ""
 let icon2src = ""
 
-const{title = "Placeholder", thumbnail, intro, why, readme, image1, image2, image3, icon1, icon2, hackatime, repository} = Astro.props
+const{title, category, thumbnail, intro, why, readme, image1, image2, image3, icon1, icon2, hackatime, repository} = Astro.props
 
 const readmes = import.meta.glob<{default: any}>("../readme/*.md", { eager: true });
 const readmefile = readmes[`../readme/${readme}.md`];
@@ -85,5 +90,9 @@ if (icon2 == "hackatime") {icon2src = hackatime}
                         <img id="thumbnail" src={thumbnail.src} alt="thumbnail" class="lg:mr-35 w-full max-w-lg h-auto rounded-3xl border-2 border-stone-400">
                 </li>
             </ul>
+            <div class="pt-10">
+                <h1 class="bg-linear-to-r from-pink-700 via-orange-700 to-pink-700 text-transparent bg-clip-text text-4xl font-bold w-75 h-12">Recent Devlogs:</h1>
+                <Devlogs devlogs={devlogs} category={category}/>
+            </div>
         </main>
 </div>

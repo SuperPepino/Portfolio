@@ -9,7 +9,8 @@ interface Props {
 	image?: string;
 }
 const { title = "Pepino's Portfolio", description = "A simple website with my projects",
- image = "/images/Icon.jpg", opacity = "opacity-60"} = Astro.props;
+ image = "/images/Icon.jpg", opacity} = Astro.props;
+ if (opacity == "") {let opacity = "60"}
 ---
 
 <!doctype html>
@@ -25,10 +26,17 @@ const { title = "Pepino's Portfolio", description = "A simple website with my pr
 		<title>{title}</title>
 	</head>
 	<body class="min-h-screen size-full m-0">
-			<div id="container" class="relative bg-gray-900 min-h-screen overflow-x-hidden">
-			<div class=`absolute inset-0 bg-cover bg-center blur-3xl ${opacity} pointer-events-none` style={`background-image: url(${background.src});`}>
-			</div> 
-		<Header class="z-10"/>
-		<slot />
+		<div id="container" class="relative min-h-screen overflow-x-hidden bg-gray-900">
+			<div
+				class={`absolute inset-0 z-0 bg-repeat bg-center blur-3xl ${opacity} pointer-events-none`}
+				style={`background-image: url(${background.src});`}
+			></div>
+
+			<Header class="relative z-10" />
+
+			<main class="relative z-10">
+				<slot />
+			</main>
+		</div>
 	</body>
 </html>

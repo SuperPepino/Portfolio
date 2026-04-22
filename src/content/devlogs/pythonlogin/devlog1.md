@@ -1,19 +1,13 @@
 ---
-categories: ["python login"]
+project: "pythonlogin"
 date: "2026-03-25"
-image: "../images/pythonlogindevlog.png"
+image: "src/content/images/pasted-2026-03-19T09-18-34-569Z.jpg"
 featured: false
-title: "Devlog 1"
+title: "Fixed Ban system"
+link: "PythonLogin"
 ---
 
-Hello everyone,
-Today I mostly tried to learn a lot of random stuff because I don't really know how Astro works yet, and I also did not know where to start. It was kind of hard to figure out some things but it worked out so yeah that's cool. I used a lot of ai to try to learn stuff. Not directly copy pasting stuff tho as that's not fun. Also Astro documentation has been really helpful lowk :P. 
-I made a navbar and working on background and project tiles for on project page so yeah. That was it for today. Also changelog ↓.
-Thank you for reading
-<br>
-<br>
-## Changelog version 0.0.1 or smt
-- Random shit
-- Nav Bar with animations
-- Started on background
-- Mostly learning
+First work on project didnt log but
+Made ban system and message system work flawlessly again :)
+
+Also working on some more bug fixes and making database :p

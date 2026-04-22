@@ -1,0 +1,45 @@
+---
+import { marked } from "marked";
+import { type CollectionEntry } from "astro:content";
+import { render } from "astro:content"
+
+type Props = {
+    devlog: CollectionEntry<"devlogs">;
+    folder: string;
+}
+
+const { devlog, folder } = Astro.props
+
+const { Content } = await render(devlog);
+import stamp from "../assets/stamp.png";
+
+
+---
+
+<div class="relative border-15 bg-gray-800 rounded-2xl border-gray-700 p-6 w-full max-w-2xl">
+    <div class="invisible lg:visible absolute -left-2 -translate-x-1/2 w-40 h-40 -top-12 z-0">
+        <img src={stamp.src} class="object-fit absolute"/>
+    </div>
+    <p
+        class="text-3xl text-zinc-200 mb-4 font-bold inline-block"
+    >
+        {devlog.data.title}
+    </p>
+
+    <p class="text-[#cbc0b2] font-semibold text-lg pb-4">
+        Written by <span class="text-purple-400 hover:underline"><a href="/">Pepino</a></span> on {devlog.data.date}
+    </p>
+
+    <div class="text-zinc-300 font-semibold text-2xl mb-6 prose prose-invert max-w-none">
+        <Content />
+    </div>
+
+    {devlog.data.image && (
+            <img
+                src={`../${devlog.data.image}`}
+                alt={devlog.data.title}
+                class="rounded-2xl shadow-2xl mb-6 w-full h-auto max-h-96 object-contain bg-gray-400"
+            />
+    )}
+
+</div>
