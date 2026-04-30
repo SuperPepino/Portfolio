@@ -1,10 +1,10 @@
 ---
 project: "Portfolio"
 date: "2026-04-30"
-image: "images/download (9).jpg"
-image2: "images/download (8).jpg"
-image3: "images/download (7).jpg"
-image4: "images/download (6).jpg"
+image: "images/download (9).png"
+image2: "images/download (8).png"
+image3: "images/download (7).png"
+image4: "images/download (6).png"
 featured: false
 title: "Attractiveness improvements"
 link: "Portfolio"
