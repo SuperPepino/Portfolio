@@ -1,7 +1,7 @@
 ---
-project: "pythonlogin"
+project: "Python Login System"
 date: "2026-03-25"
-image: "src/content/images/pasted-2026-03-23T16-31-37-333Z.jpg"
+image: "images/pasted-2026-03-23T16-31-37-333Z.jpg"
 featured: false
 title: "Blacklist command"
 link: "PythonLogin"

@@ -1,7 +1,7 @@
 ---
 project: "Portfolio"
 date: "2026-03-30"
-image: "src/content/images/pasted-2026-03-30T14-03-00-865Z.jpg"
+image: "images/pasted-2026-03-30T14-03-00-865Z.jpg"
 featured: false
 title: "Fixed background and project list page"
 link: "Portfolio"

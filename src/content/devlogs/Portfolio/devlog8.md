@@ -1,8 +1,8 @@
 ---
 project: "Portfolio"
 date: "2026-04-12"
-image: "src/content/images/1000021071 (1).jpg"
-image2: "src/content/images/1000021072 (1).jpg"
+image: "images/1000021071 (1).jpg"
+image2: "images/1000021072 (1).jpg"
 featured: false
 title: "Mobile compatibility fix"
 link: "Portfolio"

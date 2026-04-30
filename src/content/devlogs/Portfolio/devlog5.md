@@ -1,9 +1,9 @@
 ---
 project: "Portfolio"
 date: "2026-04-08"
-image: "src/content/images/pasted-2026-04-08T12-41-23-872Z.jpg"
-image2: "src/content/images/pasted-2026-04-08T12-41-26-379Z.jpg"
-image3: "src/content/images/pasted-2026-04-08T12-41-28-518Z.jpg"
+image: "images/pasted-2026-04-08T12-41-23-872Z.jpg"
+image2: "images/pasted-2026-04-08T12-41-26-379Z.jpg"
+image3: "images/pasted-2026-04-08T12-41-28-518Z.jpg"
 featured: false
 title: "Made homepage, about me and deployed 1.0"
 link: "Portfolio"

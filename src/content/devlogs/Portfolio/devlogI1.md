@@ -1,9 +1,9 @@
 ---
 project: "Portfolio"
 date: "2026-04-22"
-image: "src/content/images/download.png"
-image2: "src/content/images/download (1).png"
-image3: "src/content/images/download (2).png"
+image: "images/download.png"
+image2: "images/download (1).png"
+image3: "images/download (2).png"
 featured: false
 title: "Added devlogs"
 link: "Portfolio"

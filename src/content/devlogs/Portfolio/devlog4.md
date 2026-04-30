@@ -1,7 +1,7 @@
 ---
 project: "Portfolio"
 date: "2026-04-04"
-image: "src/content/images/pasted-2026-04-04T09-21-58-049Z.jpg"
+image: "images/pasted-2026-04-04T09-21-58-049Z.jpg"
 featured: false
 title: "Made new logo and improved project pages"
 link: "Portfolio"

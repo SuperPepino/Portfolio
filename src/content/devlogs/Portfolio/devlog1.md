@@ -1,7 +1,7 @@
 ---
 project: "Portfolio"
 date: "2026-03-26"
-image: "src/content/images/pasted-2026-03-26T18-47-59-637Z.jpg"
+image: "images/pasted-2026-03-26T18-47-59-637Z.jpg"
 featured: false
 title: "Made navbar"
 link: "Portfolio"

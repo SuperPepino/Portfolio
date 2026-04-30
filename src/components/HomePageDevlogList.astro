@@ -1,0 +1,12 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Devlog from "./ProjectPageDevlog.astro";
+import { getCollection } from "astro:content";
+
+const devlogs = await getCollection("devlogs")
+const shuffled = devlogs.sort(() => 0.5 - Math.random());
+const randomdevlogs = shuffled.slice(0, 5);
+---
+<div class="flex flex-col-reverse gap-y-10 lg:gap-y-24 mb-24 w-full lg:w-1/2 mx-auto">
+    {randomdevlogs.map((devlog) => (<Devlog devlog={devlog}/>))}
+</div>

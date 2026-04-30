@@ -1,7 +1,7 @@
 ---
-project: "pythonlogin"
+project: "Python Login System"
 date: "2026-03-25"
-image: "src/content/images/pasted-2026-03-28T14-32-03-751Z.jpg"
+image: "images/pasted-2026-03-28T14-32-03-751Z.jpg"
 featured: false
 title: "Added better install explanation"
 link: "PythonLogin"

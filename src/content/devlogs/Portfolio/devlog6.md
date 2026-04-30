@@ -1,7 +1,7 @@
 ---
 project: "Portfolio"
 date: "2026-04-10"
-image: "src/content/images/pasted-2026-04-10T21-10-21-464Z (1).jpg"
+image: "images/pasted-2026-04-10T21-10-21-464Z (1).jpg"
 featured: false
 title: "Improved homepage and learned js"
 link: "Portfolio"

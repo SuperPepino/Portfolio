@@ -1,11 +1,11 @@
 ---
 project: "Portfolio"
 date: "2026-04-15"
-image: "src/content/images/1000021103 (1).jpg"
-image2: "src/content/images/1000021104 (1).jpg"
-image3: "src/content/images/1000021106 (1).jpg"
-image4: "src/content/images/1000021107 (1).jpg"
-image5: "src/content/images/1000021108 (1).jpg"
+image: "images/1000021103 (1).jpg"
+image2: "images/1000021104 (1).jpg"
+image3: "images/1000021106 (1).jpg"
+image4: "images/1000021107 (1).jpg"
+image5: "images/1000021108 (1).jpg"
 featured: false
 title: "Version 2.0 deployment update"
 link: "Portfolio"

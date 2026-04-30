@@ -1,7 +1,7 @@
 ---
-project: "HorrorGame"
+project: "Horror Game"
 date: "2026-03-24"
-image: "src/content/images/pasted-2026-03-24T16-07-38-228Z.jpg"
+image: "images/pasted-2026-03-24T16-07-38-228Z.jpg"
 featured: false
 title: "Added Sound effects"
 link: "HorrorGame"

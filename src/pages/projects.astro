@@ -9,17 +9,17 @@ import portfolioThumbnail from "../assets/thumbnails/portfolio.png";
 
 <Layout title="Pepino's Projects">   
     <main class="z-10 w-full min-h-screen text-center lg:text-left">
-        <h1 class="text-5xl font-bold bg-linear-to-r my-12 from-blue-700 via-orange-700 to-pink-700 bg-clip-text text-transparent w-75 h-15 lg:ml-[2.7%]">My projects:</h1>
+        <h1 class="text-5xl font-bold bg-linear-to-r my-12 from-pink-700 via-orange-700 to-pink-700 bg-clip-text text-transparent w-75 h-15 lg:ml-[2.7%]">My projects:</h1>
         <section id="active" class="lg:ml-[2.7%]">
             <h1 class="text-4xl font-bold pb-5 bg-linear-to-r from-pink-700 to-orange-700 bg-clip-text text-transparent w-30">Active:</h1>
-            <ul class="flex flex-wrap gap-4 list-none">
+            <ul class="flex flex-wrap gap-4 list-none max-lg:justify-center">
             <li><ProjectTile title="Python Login" image={pythonloginThumbnail} project="PythonLogin" icon1="python" hackatime="https://img.shields.io/badge/hackatime-11h%2019m-purple"/></li>
             <li><ProjectTile title="Horror Game" image={horrorgameThumbnail} project="HorrorGame" icon1="unreal" icon2="blender" hackatime="https://img.shields.io/badge/hackatime-59h%2041m-purple"/></li>
             </ul>
         </section>
         <section id="completed" class="pt-30 lg:ml-[2.7%] mb-5 lg:mb-0">
             <h1 class="text-4xl font-bold pb-5 bg-linear-to-r from-pink-700 to-orange-700 bg-clip-text text-transparent w-50">Completed: </h1>
-            <ul class="flex gap-x-5 list-none">
+            <ul class="flex flex-wrap gap-4 list-none max-lg:justify-center">
             <li><ProjectTile title="Portfolio" image={portfolioThumbnail} project="Portfolio" icon1="astro" icon2="tailwind" hackatime="https://hackatime.hackclub.com/api/v1/badge/U08BJ25057T/SuperPepino/Portfolio"/></li>
             </ul>
         </section>

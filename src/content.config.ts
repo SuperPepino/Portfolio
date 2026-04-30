@@ -7,7 +7,11 @@ const devlogsCollection = defineCollection({
         project: z.string().optional(),
         date: z.string(),
         featured: z.boolean(),
-        image: z.string().optional(),
+        image: z.string(),
+        image2: z.string().optional(),
+        image3: z.string().optional(),
+        image4: z.string().optional(),
+        image5: z.string().optional(),
         title: z.string(),
         link: z.string(),
     })

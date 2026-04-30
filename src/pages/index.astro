@@ -6,17 +6,21 @@ const devlogs = await getCollection("devlogs")
 import Layout from '../layouts/Layout.astro';
 import pfp from "../assets/pfp.jpg";
 import "../styles/global.css";
-import DevlogList from "../components/DevlogList.astro"
+import DevlogList from "../components/HomePageDevlogList.astro"
+
+    const discord = await fetch("https://api.lanyard.rest/v1/users/926813944402812949");
+    const discorddata = await discord.json();
+
 ---
 
 <Layout title="Pepino's Portfolio">
-    <main class="py-10 lg:py-20 relative min-h-screen w-full">
+    <main class="py-10 lg:px-25 lg:py-20 relative min-h-screen w-full">
         
-        <ul class="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-0">
-            <li class="w-full lg:w-2/3"><div id="short-about" class="text-center lg:text-left lg:ml-[2.7%] py-10 text-2xl font-bold text-black ">
+        <ul class="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-0">
+            <li class="w-full lg:w-2/3"><div id="short-about" class="text-center lg:text-left py-10 text-2xl font-bold text-black ">
                 
                 <section id="simple-info" class="text-zinc-300 max-w-160">
-                    <p class="text-5xl font-bold pb-2.5 text-white">Yo, I am <span id="name" class="">Pepino</span></p>
+                    <p class="text-5xl font-bold pb-2.5 text-white">Yo, I am <span id="name" class="">Pepino</span><span class="inline-block transition-transform duration-300 hover:rotate-20 hover:scale-105 select-none">👋</span></p>
                     <p>I am a teen programmer from the Netherlands.</p>
                     <p>This is my website where you can check out my projects, skillset, story and other things about me</p>
                 </section>
@@ -36,12 +40,12 @@ import DevlogList from "../components/DevlogList.astro"
                         </div></li>
                     </ul>
                     <div id="languagesdisplay" class="basis-full">
-                        <ul id="tool-list" class="pl-10 pt-4 flex flex-wrap gap-x-8 pl6 text-zinc-200">
+                        <ul id="tool-list" class="pl-10 pt-4 flex flex-wrap gap-x-12 pl6 text-zinc-200">
                             
                         </ul>
                     </div>
                 </section>
-                <div class="flex flex-wrap gap-x-4 gap-y-0">
+                <div class="flex flex-wrap gap-x-4 gap-y-0 max-lg:justify-center">
                     <a href="/about" class="font-bold text-center">
                         <div class="my-5 w-63 h-12.5 text-xl bg-transparent border-2 border-orange-300 rounded-3xl px-4 py-2 text-zinc-300 hover:bg-gray-600 cursor-pointer select-none">
                             <p class="mx-auto">✨ More About Me ✨</p>
@@ -52,27 +56,67 @@ import DevlogList from "../components/DevlogList.astro"
                             <p class="mx-auto">💎 My Projects 💎</p>
                         </div>
                     </a>
+                    <div id="devlogbutton"  class="font-bold text-center cursor-pointer" >
+                        <div class="my-5 w-65 h-12.5 text-xl bg-transparent border-2 border-emerald-300 rounded-3xl px-4 py-2 text-zinc-200 hover:bg-gray-600 cursor-pointer select-none">
+                            <p class="mx-auto">🍀 Explore Devlogs 🍀</p>
+                        </div>
+                    </div>
                 </div>
             </div></li>
-            <li class="w-full lg:w-1/3 flex justify-center lg:justify-end">
-                <img src={pfp.src} alt="Cute Cat Image" class="w-60 lg:w-110 lg:mr-[2.7%] rounded-3xl border-4 border-gray-900"/>
-            </li>
-        </ul>
 
-        <section id="recent-devlogs" class="ml-[2.7%] py-5">
-            <details class="group">
-                <summary class="text-center cursor-pointer select-none list-none"><h1 class="bg-linear-to-r from-blue-700 via-orange-700 to-pink-700 hover:from-pink-700 hover:via-orange-700 hover:to-blue-700 text-transparent bg-clip-text text-4xl font-bold w-125 h-12 mb-12 hover:underline">Click to see recent Devlogs:</h1></summary>
-                <DevlogList devlogs={devlogs}/>
-            </details>
-            </ul>
+            
+
+            <li class="w-full lg:w-4/9 flex flex-wrap justify-center lg:justify-end">
+                <ul class="flex flex-col gap-10">
+                    <li class="mx-auto">
+                        <img src={pfp.src} alt="Cute Cat Image" class="w-60 lg:w-110 rounded-3xl border-4 border-gray-900"/>
+                        <p class="text-zinc-300 text-2xl">⬆️Image of my cat :)</p>
+                    </li>
+                    <li class="w-full flex justify-center lg:justify-end">
+                        <div class=" rounded-2xl w-4/5 h-auto">
+                            <h1 class="font-semibold text-zinc-200 bg-[#1a1c1f] rounded-2xl rounded-b-none text-center py-1 w-35 h-7.5">Discord status: </h1>
+                            <img class="bg-[#1a1c1f] object-cover rounded-2xl rounded-tl-none" style="opacity: 1; transform: translateZ(0px);" src="https://lanyard.cnrad.dev/api/926813944402812949" alt="discord status">
+                        </div>
+                    </li>
+                    <li class="w-full flex justify-center lg:justify-end">
+                        <div class="rounded-2xl w-4/5 h-auto">
+                            <h1 class="font-semibold text-zinc-200 bg-[#1a1c1f] rounded-2xl rounded-b-none text-center py-1 w-35 h-7.5">Clock: </h1>
+                            <div class="bg-[#1a1c1f] w-full h-35 font-semibold text-7xl text-zinc-300 py-5 font-digital rounded-2xl rounded-tl-none">
+                                <h1 id="clock" class="text-center"></h1>
+                                <h1 id="date" class="text-center text-2xl"></h1>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            
+        </ul>
+        <section id="devlogs" class="py-5 lg:ml-25 hidden lg:-translate-y-90">
+            <DevlogList devlogs={devlogs} />
         </section>
     </main>
 </Layout>
 
 <script>
+
     document.addEventListener("DOMContentLoaded", () => {
         render();
         colorchange();
+        updateClock();
+        updateDate();
+        setInterval(updateClock, 1000);
+        setInterval(updateDate, 1000);
+
+        const devlogbutton = document.getElementById("devlogbutton") as HTMLElement;
+        const devlogs = document.getElementById("devlogs") as HTMLElement;
+
+        let devlogvisible = false;
+        devlogbutton.addEventListener("click", toggleDevlogs);
+
+        function toggleDevlogs() {
+            devlogvisible = !devlogvisible;
+            devlogs.classList.toggle("hidden", !devlogvisible);
+        }
     });
 
 
@@ -208,22 +252,38 @@ import DevlogList from "../components/DevlogList.astro"
     const buttons = document.querySelectorAll(".tool-btn");
     const list = document.getElementById("tool-list") as HTMLElement;
     const name = document.getElementById("name") as HTMLElement;
-    
+
     let current: ToolCategory = "web";
     const colors = ["text-blue-700", "text-orange-700", "text-pink-700"];
     const colorindex = Math.floor(Math.random() * colors.length);
     const randomcolor = colors[colorindex];
-    
+
+    function updateClock() {
+        const clockelement = document.getElementById("clock");
+        if (clockelement) {
+            const now = new Date();
+            clockelement.textContent = now.toLocaleTimeString();
+        };
+    };
+
+    function updateDate() {
+        const dateelement = document.getElementById("date")
+        if (dateelement) {
+            const nowdate = new Date();
+            dateelement.textContent = nowdate.toLocaleDateString();
+        };
+    };
+
     function colorchange() {
         name.classList.add(`${randomcolor}`)
-    }
+    };
 
     function render() {
         list.innerHTML = data[current]
         .map((item) => `
         <li>
             <a href="${item.href}">
-                <div class="flex flex-col text-center ${item.color} transition-colors select-none">
+                <div class="flex flex-col text-center ${item.color} hover:-translate-y-1 transition-transform transition-colors select-none">
                     ${item.svg}
                     <p>${item.name}</p>
                 </div>

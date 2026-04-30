@@ -5,20 +5,24 @@ import { render } from "astro:content"
 
 type Props = {
     devlog: CollectionEntry<"devlogs">;
-    folder: string;
 }
 
-const { devlog, folder } = Astro.props
+const { devlog } = Astro.props
 
 const { Content } = await render(devlog);
 import stamp from "../assets/stamp.png";
 
+const images = [devlog.data.image, devlog.data.image2, devlog.data.image3, devlog.data.image4, devlog.data.image5].filter(Boolean);
 
+const devlogId = devlog.id.replace(/[^a-zA-Z0-9]/g, '_');
+const imageId = `imagedisplay_${devlogId}`;
+const prevId = `prev_${devlogId}`;
+const nextId = `next_${devlogId}`;
 ---
 
 <div class="relative border-15 bg-gray-800 rounded-2xl border-gray-700 p-6 w-full max-w-2xl">
-    <div class="invisible lg:visible absolute -left-2 -translate-x-1/2 w-40 h-40 -top-12 z-0">
-        <img src={stamp.src} class="object-fit absolute"/>
+    <div class="invisible lg:visible absolute -left-2 -translate-x-1/2 w-40 h-40 -top-12 z-0 pointer-events-none">
+        <img src={stamp.src} class="object-fit absolute select-none pointer-events-none"/>
     </div>
     <p
         class="text-3xl text-zinc-200 mb-4 font-bold inline-block"
@@ -27,19 +31,51 @@ import stamp from "../assets/stamp.png";
     </p>
 
     <p class="text-[#cbc0b2] font-semibold text-lg pb-4">
-        Written by <span class="text-purple-400 hover:underline"><a href="/">Pepino</a></span> on {devlog.data.date}
+        <span class="text-purple-400 hover:underline"><a href="/">Pepino</a></span> worked on <span class="text-purple-400 hover:underline"><a href=`/Projects/${devlog.data.link}`>{devlog.data.project}</a></span> on {devlog.data.date}
     </p>
 
     <div class="text-zinc-300 font-semibold text-2xl mb-6 prose prose-invert max-w-none">
         <Content />
     </div>
 
-    {devlog.data.image && (
-            <img
-                src={`../${devlog.data.image}`}
-                alt={devlog.data.title}
-                class="rounded-2xl shadow-2xl mb-6 w-full h-auto max-h-96 object-contain bg-gray-400"
-            />
-    )}
-
+    <div class="rounded-2xl relative">
+        {devlog.data.image && (
+                <img
+                    id={imageId}
+                    src={`/${images[0]}`}
+                    alt={devlog.data.title}
+                    class="rounded-2xl shadow-2xl mb-6 w-full h-auto max-h-96 object-contain bg-gray-400"
+                />
+        )}
+        {images.length > 1 && (
+            <>
+                <button id={prevId} class="absolute left-2 top-1/2 -translate-y-1/2 bg-gray-800 text-purple-400 px-3 py-1 rounded-full h-10 w-10 text-xl font-bold cursor-pointer">&lt;</button>
+                <button id={nextId} class="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-800 text-purple-400 px-3 py-1 rounded-full h-10 w-10 text-xl font-bold cursor-pointer">&gt;</button>
+            </>
+        )}
+    </div>
 </div>
+
+<script define:vars={{images, devlogId, imageId, prevId, nextId}}>
+    document.addEventListener('DOMContentLoaded', () => {
+        if (images.length > 1) {
+            let index = 0;
+            const img = document.getElementById(imageId);
+            const nextBtn = document.getElementById(nextId);
+            const prevBtn = document.getElementById(prevId);
+            
+            if (img && nextBtn && prevBtn) {
+                
+                nextBtn.onclick = () => {
+                    index = (index + 1) % images.length;
+                    img.src = `/${images[index]}`;
+                };
+
+                prevBtn.onclick = () => {
+                    index = (index - 1 + images.length) % images.length;
+                    img.src = `/${images[index]}`;
+                };
+            }
+        }
+    });
+</script>

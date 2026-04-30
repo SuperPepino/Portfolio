@@ -1,7 +1,5 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Container from "../../components/Container.astro";
-import background from "../../assets/background2.svg";
 import ProjectPage from "../../components/ProjectPage.astro";
 import horrorgameThumbnail from "../../assets/thumbnails/horrorgame.png";
 import pythonloginThumbnail from "../../assets/thumbnails/login.png";
@@ -39,10 +37,10 @@ const {project} = Astro.params;
 )}
 
 {project == "PythonLogin" && (
-    <Layout title = "Horror Game">
+    <Layout title = "Python Login System">
         <ProjectPage 
-        title="Python Login" icon1="python" icon2="hackatime"
-        category="pythonlogin"
+        title="Python Login System" icon1="python" icon2="hackatime"
+        category="PythonLogin"
         readme="login"
         hackatime="https://img.shields.io/badge/hackatime-11h%2019m-purple"
         repository="https://github.com/SuperPepino/simpleloginV1" thumbnail={pythonloginThumbnail}

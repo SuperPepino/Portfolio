@@ -1,7 +1,7 @@
 ---
-project: "pythonlogin"
+project: "Python Login System"
 date: "2026-03-25"
-image: "src/content/images/pasted-2026-03-20T13-42-01-525Z.jpg"
+image: "images/pasted-2026-03-20T13-42-01-525Z.jpg"
 featured: false
 title: "Fixed program restarting to log out"
 link: "PythonLogin"

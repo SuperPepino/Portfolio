@@ -1,7 +1,7 @@
 ---
-project: "pythonlogin"
+project: "Python Login System"
 date: "2026-03-25"
-image: "src/content/images/pasted-2026-03-19T09-18-34-569Z.jpg"
+image: "images/pasted-2026-03-19T09-18-34-569Z.jpg"
 featured: false
 title: "Fixed Ban system"
 link: "PythonLogin"

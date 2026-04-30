@@ -1,7 +1,7 @@
 ---
-project: "HorrorGame"
+project: "Horror Game"
 date: "2026-03-21"
-image: "src/content/images/pasted-2026-03-21T10-35-46-068Z.jpg"
+image: "images/pasted-2026-03-21T10-35-46-068Z.jpg"
 featured: false
 title: "Made navbar"
 link: "HorrorGame"

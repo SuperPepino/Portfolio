@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "DS-Digital";
+  src: url("../fonts/DS-DIGI.TTF") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-digital {
+  font-family: "DS-Digital", monospace;
+}
+
 .google-sans-GoogleSans {
   font-family: "Google Sans", sans-serif;
   font-optical-sizing: auto;
@@ -13,7 +25,7 @@
   position: relative;
   text-decoration: none;
   padding-bottom: 7.5px;
-  color: rgb(172, 176, 182);
+  color: rgb(226, 228, 230);
 }
 
 .nav-link:after {
@@ -24,7 +36,7 @@
   transform: translateX(-50%);
   width: 0;
   height: 4px;
-  background-color: rgb(30, 56, 204);
+  background-color: rgb(24, 58, 255);
   transition: width 0.5s ease;
 }
 

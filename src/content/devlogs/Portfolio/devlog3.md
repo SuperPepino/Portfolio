@@ -1,8 +1,8 @@
 ---
 project: "Portfolio"
 date: "2026-04-02"
-image: "src/content/images/Screenshot 2026-04-02 12.52.14 PM.jpg"
-image2: "src/content/images/Screenshot 2026-04-02 12.51.32 PM.jpg"
+image: "images/Screenshot 2026-04-02 12.52.14 PM.jpg"
+image2: "images/Screenshot 2026-04-02 12.51.32 PM.jpg"
 featured: false
 title: "Started on project page"
 link: "Portfolio"

@@ -31,18 +31,26 @@ if (icon2 == "tailwind") {icon2src = "https://img.shields.io/badge/-Tailwind-000
 if (icon1 == "blender") {icon1src = "https://img.shields.io/badge/-Blender-000?&logo=blender"}
 if (icon2 == "blender") {icon2src = "https://img.shields.io/badge/-Blender-000?&logo=blender"}
 
+const allFiles = import.meta.glob(`/src/content/devlogs/**/*.md`);
+const files = Object.keys(allFiles).filter(path => path.includes(`/${project}/`));
+const devlogcount = files.length;
+
 ---
-<div id="tile" class="bg-linear-to-br from-gray-950 via-purple-950 to-gray-950 rounded-3xl size-max w-64 aspect-square overflow-x-hidden mx-auto my-auto border-black border-2">
+<div id="tile" class="bg-gray-800 rounded-3xl size-max w-64 h-80 aspect-square overflow-x-hidden mx-auto my-auto border-gray-700 border-12 transition-transform hover:-translate-y-2">
     <a href={`/Projects/${project}`}>
-        <img id="thumbnail" src={image.src} alt={alt} class="object-center w-sm max-h-35 object-cover ">
-        <h1 class="text-center text-3xl text-cyan-600">{title}</h1>
-    
-        <ul class="flex justify-center">
-            <li><img id="language1" src={icon1src} class="px-2 py-2"/></li>
-            <li><img id="language2" src={icon2src} class="px-2 py-2"/></li>
-        </ul>
-        <ul class="flex justify-center">
-            <li><img id="hackatimetime" src={hackatime} class="pt-4"/></li>
-        </ul>
+        <img id="thumbnail" src={image.src} alt={alt} class="object-center w-sm max-h-35 object-cover">
+        <h1 class="text-center text-3xl text-zinc-300">{title}</h1>
+        {devlogcount > 1 && (<h1 class="text-center text-1xl text-zinc-300">{devlogcount} devlogs</h1>)}
+        {devlogcount == 1 && (<h1 class="text-center text-1xl text-zinc-300">{devlogcount} devlog</h1>)}
+        <div id="data" class="">
+            <ul class="flex justify-center">
+                <li><img id="language1" src={icon1src} class="px-2 py-2"/></li>
+                <li><img id="language2" src={icon2src} class="px-2 py-2"/></li>
+            </ul>
+            <ul class="flex justify-center">
+                <li><img id="hackatimetime" src={hackatime} class="py-2"/></li>
+            </ul>
+        </div>
     </a>
 </div>
+

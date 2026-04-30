@@ -1,8 +1,8 @@
 ---
 project: "Portfolio"
 date: "2026-04-11"
-image: "src/content/images/pasted-2026-04-11T21-16-00-011Z.jpg"
-image2: "src/content/images/pasted-2026-04-11T21-13-46-980Z.jpg"
+image: "images/pasted-2026-04-11T21-16-00-011Z.jpg"
+image2: "images/pasted-2026-04-11T21-13-46-980Z.jpg"
 featured: false
 title: "Bug fixes, random colored name and 404 page"
 link: "Portfolio"
