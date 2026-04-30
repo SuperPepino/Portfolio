@@ -14,7 +14,7 @@ import DevlogList from "../components/HomePageDevlogList.astro"
 ---
 
 <Layout title="Pepino's Portfolio">
-    <main class="py-10 lg:px-25 lg:py-20 relative min-h-screen w-full">
+    <main class="py-10 lg:px-15 2xl:px-25 lg:py-20 relative min-h-screen w-full">
         
         <ul class="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-0">
             <li class="w-full lg:w-2/3"><div id="short-about" class="text-center lg:text-left py-10 text-2xl font-bold text-black ">
@@ -91,7 +91,7 @@ import DevlogList from "../components/HomePageDevlogList.astro"
             </li>
             
         </ul>
-        <section id="devlogs" class="py-5 lg:ml-25 hidden lg:-translate-y-90">
+        <section id="devlogs" class="py-5 2xl:ml-25 hidden lg:-translate-y-90">
             <DevlogList devlogs={devlogs} />
         </section>
     </main>
