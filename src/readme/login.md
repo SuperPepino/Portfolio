@@ -19,33 +19,28 @@
 
 ---
 
-## 🌟 Why This Project?
+## 🌟 Why This Login System? 🌟
 
 - Fully customizable and easy to extend  
 - Includes real-world features (messaging, permissions, banning, etc.)  
-- Lightweight — no database required  
+- Optimized and Lightweight — no database required  
 
 ---
 
-## ✨ Features
+## ✨ Features ✨
 
-- 🔑 User authentication (login & signup)  
-- 🔒 Password hashing using SHA-256  
-- 📬 User-to-user messaging  
-- 📥 Mailbox system (read, send, clear)  
-- 🛡️ Permission system (tiers 1–5)  
-- ⬆️ User promotion system  
-- 🚫 User banning system  
-- ❌ Account deletion  
-- 🛠️ Initial setup mode  
+- User authentication (login & signup)  
+- Password hashing using SHA-256  
+- Between-user messaging  
+- Mailbox system (read, send, clear)  
+- Permission system (5 tiers)  
+- User promotion system  
+- User banning system  
+- Account deletion  
+- Initial setup mode  
 
 ---
-
-## 🔐 System Overview
-
-This system uses **plain text files** as a simple, lightweight database.
-
-### 📁 Data Storage
+### 📁 Data Storage Overview
 
 - `users.txt` → Stores usernames and hashed passwords  
 - `bannedusers.txt` → Stores banned usernames  
@@ -54,11 +49,11 @@ This system uses **plain text files** as a simple, lightweight database.
 
 ---
 
-## 🛠️ First-Time Setup
+## 🚀 Quick-Start Guide
 
 download the program by running:
 ```bash
-pip install simple-login-system==0.1.3
+pip install simple-login-system==0.{version}
 ```
 
 Run it by typing
@@ -72,6 +67,12 @@ Run the program and type:
 ```bash
 setup
 ```
+<h1 align="center">
+  <b>!DISCLAIMER!</b>
+  <p>Setup user can only be used for promoting and some default features</p>
+  <p>Make a different user and promote it to use more features</p>
+</h1>
+
 
 This will:
 
@@ -83,21 +84,11 @@ This will:
 - Username: `setup`  
 - Password: `setup`  
 
-⚠️ **Important:** Delete this account after creating your own admin account and give it perms.
+ **Important:** Delete this account after creating your own admin account and give it perms.
 
 ---
 
-## 🧑‍💻 Usage
-
-At startup, choose:
-
-- `log in`  
-- `sign up`  
-- `setup`  
-
----
-
-## 📜 Commands
+## Commands
 
 | Command         | Description                          |
 | --------------- | ------------------------------------ |
@@ -112,54 +103,35 @@ At startup, choose:
 | `changelog`     | View changes                         |
 | `quit`          | Exit the program                     |
 
----
-
-## 🚫 Banning System
-
-- Stored in `bannedusers.txt`  
-
-When a user is banned:
-
-- Their account is removed  
-- Their mailbox is deleted  
-- Their username cannot be reused  
-
----
-
-## 🔮 Planned Features
-
-- Improved security (salted hashing, validation)
-- Better error handling
-- Cleaner code structure
-- Database support (SQLite)
-- Logging system
-- Admin tools / interface
 
 ---
 
 ## 🤝 Contributing
 
-- 🐛 Found a bug? Open an issue  
-- 💡 Have an idea? Suggest a feature  
-- 🔧 Want to improve the code? Submit a PR  
+-  Found a bug? Open an issue  
+-  Have an idea? Suggest a feature  
+-  Want to improve the code? Submit a PR  
 
 All contributions are welcome.
 
 ---
-## 🤖 AI declaration
+## AI declaration
 
-Used copilot for deployment to PyPi and chatgpt for simple bug fixes early on and for writing part of the ReadMe
-
----
-
-## 📄 License
-
-This project is free to use for **educational purposes**.
+Used copilot for deployment to PyPi and chatgpt for simple bug fixes early on.
 
 ---
 
+## Optimization
+
+- I made the program as optimized as possible by using defs to make it run smooth, I also dont use any databases or external programs that might make it take more memory or cpu capability.
+- I made it run fast and smooth with not too much random bulk that would be in the way of users access to the program
+
+---
+<br>
 <p align="center">
   Made with learning in mind.<br>
   If you like it, consider ⭐ starring the repo!
 </p>
-I will try to update this program once in a while so I have a changelog aswel.
+<h3 align="center" ><strong>
+**I will try to update this program once in a while so I have a changelog aswel.**
+</strong></h3>
