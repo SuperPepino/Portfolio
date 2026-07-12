@@ -13,6 +13,7 @@ interface Props{
     icon2?: string;
     hackatime: string;
     repository: string;
+    demo: string;
     thumbnail: ImageMetadata;
     intro: string;
     why: string;
@@ -27,7 +28,7 @@ interface Props{
 let icon1src = ""
 let icon2src = ""
 
-const{title, category, thumbnail, intro, why, readme, image1, image2, image3, icon1, icon2, hackatime, repository} = Astro.props
+const{title, category, thumbnail, intro, why, readme, image1, image2, image3, icon1, icon2, hackatime, repository, demo} = Astro.props
 
 const readmes = import.meta.glob<{default: any}>("../readme/*.md", { eager: true });
 const readmefile = readmes[`../readme/${readme}.md`];
@@ -81,6 +82,12 @@ if (icon2 == "hackatime") {icon2src = hackatime}
                             <a href={repository}>
                                 <div class="text-xl text-center w-55 cursor-pointer select-none bg-gray-800 font-bold text-zinc-100 border-6 border-gray-700 rounded-2xl px-4 py-3 list-none transition-transform hover:-translate-y-2">
                                     <p>Github Repository</p>
+                                </div>
+                            </a>
+                        <li class="pt-3">
+                            <a href={demo}>
+                                <div class="text-xl text-center w-35 cursor-pointer select-none bg-gray-800 font-bold text-zinc-100 border-6 border-gray-700 rounded-2xl px-4 py-3 list-none transition-transform hover:-translate-y-2">
+                                    <p>Demo</p>
                                 </div>
                             </a>
                         </li>
